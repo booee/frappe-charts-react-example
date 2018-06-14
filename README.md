@@ -1,6 +1,6 @@
 # Frappe Charts + React Example
 
-> A playground for Frappe Charts + React
+A playground for [Frappe Charts](//frappe.io/) + React
 
 ## Setup
 
