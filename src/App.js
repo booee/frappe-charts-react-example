@@ -5,6 +5,16 @@ import FrappeChart from './FrappeChart'
 import './App.css'
 
 class App extends Component {
+  constructor (props) {
+    super(props)
+
+    this.handleSelectData = this.handleSelectData.bind(this)
+  }
+
+  handleSelectData (data) {
+    console.log('Data selected', data)
+  }
+
   render () {
     return (
       <div className='App'>
@@ -13,7 +23,7 @@ class App extends Component {
           <h1 className='App-title'>Welcome to React</h1>
         </header>
         <p className='App-intro'>
-          This is a react/frappe example that <i>actually works</i>
+          A react/frappe example that <i>actually works</i>
         </p>
 
         <FrappeChart
@@ -29,25 +39,25 @@ class App extends Component {
                 title: 'Some Data',
                 color: 'light-blue',
                 values: [40, 30, 25, 35]
-              },
-              {
-                title: 'Another Set',
-                color: 'light-blue',
-                values: [25, -10, 50, 15]
-              },
-              {
-                title: 'Another Set',
-                color: 'light-blue',
-                values: [10, 25, 50, -15]
               }
             ]
           }}
-          colors={['green', 'light-green', 'purple']}
-          onSelect={(d) => { console.log('data', d) }}
-          isNavigable />
+          colors={['purple']}
+          isNavigable
+          valuesOverPoints
+          onSelect={this.handleSelectData} />
       </div>
     )
   }
 }
 
 export default App
+
+// overlay hack
+// handleMountChart (chart) {
+//   chart.overlays = []
+//   chart.makeOverlay = () => {}
+//   chart.updateOverlay = () => {}
+//   chart.bindOverlay = () => {}
+//   chart.setCurrentDataPoint = (index) => { this.handleSelectData(chart.getDataPoint(index)) }
+// }
