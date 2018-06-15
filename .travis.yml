@@ -11,3 +11,4 @@ script: npm test
 branches:
   only:
     - master
+    - /^greenkeeper.*$/
