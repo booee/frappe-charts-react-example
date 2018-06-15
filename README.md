@@ -1,5 +1,7 @@
 # Frappe Charts + React Example
 
+[![Build Status](https://travis-ci.org/booee/frappe-charts-react-example.svg?branch=master)](https://travis-ci.org/booee/frappe-charts-react-example)
+
 A playground for [Frappe Charts](//github.com/frappe/charts) + React
 
 ## Setup
